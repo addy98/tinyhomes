@@ -33,44 +33,69 @@
   
   <body>
     <div class="container">
-      <h1>Tiny Homes AR</h1>
-      <p>Tap below to view the Tiny Homes project in AR.</p>
+      <h1>How to use Tiny Homes AR</h1>
+
+      <p>
+        <strong>Click the model viewer below</strong> 
+        to view an interactive AR model of a Tiny Home. 
+        Point your phone camera at an empty space on the 
+        floor to project the model. Once the house appears, 
+        walk forward in real life to explore the interior 
+        and exterior of the house. Move the phone from left 
+        to right to look around. To make the house larger or 
+        smaller, pinch the model with your fingers to zoom in or out. 
+      </p>
+
+      <p>
+        <strong>To view the Tiny Home on your computer</strong>, 
+        simply click the link. Next, click the house to load the 
+        3D model viewer. For a full-screen experience, click the 
+        bottom right-hand corner of the viewer. To explore, click 
+        and drag to look around the house and use your mouse to zoom in and out. 
+      </p>
+
+      <p>
+        <strong>What is AR?</strong> AR stands for “augmented reality,” 
+        a type of technology that uses a device, such as a mobile phone, 
+        to project digital content onto the real world. 
+      </p>
+
+      <p>
+        <strong>Learn more about how to use AR on your iPhone, iPad or Android 
+        <a href="https://www.apple.com/augmented-reality/">here</a>.</strong>
+        * AR requires an iOS or iPadOS device with iOS 11 and an A9 processor or later. 
+        If it does not immediately appear on your mobile device, we suggest viewing 
+        it on your desktop or laptop.
+      </p>
 
       <p>
         Please keep in mind that it may take a few attempts for 
         the model to load based on the device you are using.
       </p>
 
-      <a href="tinyhouse.usdz" rel="ar">
-        <img src="preview.png" alt="tiny home 3d model" />
-      </a>
+      <div id='link'>
+
+        <a href="tinyhouse.usdz" rel="ar">
+          <img src="preview.png" alt="tiny home 3d model" />
+        </a>
+
+      </div>
+    
     </div>
     
-    <div id='desktop'></div>
-
-    <div id="mobile"></div>
   </body>
   <script type="text/javascript" charset="utf-8">
     if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      document.getElementById('desktop').innerHTML = 
-        '<p>Click below to view the Tiny Homes project in 3D.</p>'+
+      document.getElementById('link').innerHTML = 
 
         '<iframe src="https://3dwarehouse.sketchup.com/embed/c8d15170-a0bb-4184-9037-5821cca435c2"'+
         ' frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="580" height="326"'+
         ' allowfullscreen></iframe>'+
 
         '<p>Click bottom right corner of model for full screen experience.</p>'
+
     } else if (/Android/i.test(navigator.userAgent)) {
-      document.getElementById('mobile').innerHTML =
-        '<h1>Tiny Homes AR</h1>'+
-        
-        '<p>Tap below to view the Tiny Homes project in AR.</p>'+
-
-        '<p>'+
-          'Please keep in mind that it may take a few attempts or a few seconds for '+ 
-          'the model to load based on the device you are using.'+
-        '</p>'+
-
+      document.getElementById('link').innerHTML =
         '<a href="intent://arvr.google.com/scene-viewer/1.0?file=https://unc-reese-tinyhomes.s3.amazonaws.com/tinyhouseAN.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;">'+
           '<img src="preview.png" alt="tiny home 3d model" />'+
         '</a>'
