@@ -20,10 +20,12 @@
         width: 100%;
       }
 
-      .container { display: none; }
       @supports (-webkit-overflow-scrolling: touch) {
        .container { display: block; }
       }
+
+      .center { text-align: center; }
+
     </style>
 
     <link rel="shortcut icon" href="#">
@@ -31,14 +33,16 @@
   
   <body>
     <div class="container">
-      <h1>Tiny Homes AR</h1>
+      <div class="center">
+        <h1>Tiny Homes AR</h1>
 
-      <div id='link'>
-
-        <a href="tinyhouse.usdz" rel="ar">
-          <img src="preview.png" alt="tiny home 3d model" />
-        </a>
-
+        <div id='link'>
+  
+          <a href="tinyhouse.usdz" rel="ar">
+            <img src="preview.png" alt="tiny home 3d model" />
+          </a>
+  
+        </div>
       </div>
 
       <h3>Instructions</h3>
